@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,3 +19,4 @@ Route::get('/', [UserController::class,'userInfo']);
 
 Route::get('user',[UserController::class,'getUWtihR']);
 
+Route::get('updt',[CategoryController::class,'update'])->name('update');

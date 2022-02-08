@@ -11,7 +11,7 @@
 
     <div class="container">
         <div class="card">
-            <card class="body">
+            <div class="card-body">
                 <table class="table table-striped">
                     <thead class="table-dark">
                         <tr>
@@ -31,9 +31,13 @@
                         @endforeach
                     </tbody>
                 </table>
-            </card>
+            </div>
+            <div class="card-footer">
+                <a href="{{route('update')}}" class="btn btn-dark float-right" >Update</a>
+            </div>
         </div>
     </div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>

@@ -9,6 +9,8 @@ class User extends Model
 {
     use HasFactory;
     protected $table='user';
+    protected $fillable=['user','catid','deptid'];
+    public $timestamps=false;
 
     public function cat()
     {
