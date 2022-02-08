@@ -17,6 +17,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [UserController::class,'userInfo']);
 
-Route::get('user',[UserController::class,'getUWtihR']);
 
-Route::get('updt',[CategoryController::class,'update'])->name('update');
