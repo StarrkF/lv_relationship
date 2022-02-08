@@ -11,4 +11,11 @@ class UserController extends Controller
     {
         dd(User::with(['cat','dept'])->get());
     }
+
+    public function userInfo()
+    {
+        $users=User::with(['cat','dept'])->get();
+
+        return view('index',compact('users'));
+    }
 }
