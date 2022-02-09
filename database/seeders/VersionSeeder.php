@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\Content;
+use App\Models\Point;
+use App\Models\UsersPoint;
 use App\Models\Version;
 use Illuminate\Database\Seeder;
 
@@ -32,7 +34,18 @@ class VersionSeeder extends Seeder
         //     'id'=>333,
         // ]);
 
-        Version::where('id',333)->delete();
+        // Version::where('id',333)->delete();
+
+        for ($i=0; $i < 765; $i++) {
+            UsersPoint::create(['points'=>1]);
+        }
+
+
+
+
+        Point::where('id',1)->update(['points_avg'=> UsersPoint::avg('points')]);
+
+        // UsersPoint::truncate();
 
     }
 }
